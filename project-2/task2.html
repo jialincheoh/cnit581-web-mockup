@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Task Page</title>
+  </head>
+  <body class="task1">
+    <div class="container">
+      <div class="sidebar">
+        <h2>ChatGPT App</h2>
+        <div class="chat-container">
+          <!-- ChatGPT app content goes here -->
+          <p>This is where ChatGPT app content goes.</p>
+          <div id="chat-display"></div>
+          <br />
+          <input type="text" id="user-input" placeholder="Type a message..." />
+          <button id="send-btn">Send</button>
+        </div>
+        <script src="script.js"></script>
+      </div>
+      <div class="center">
+        <div class="slogan-counter">
+          <h1>Slogan 2 out of Slogan 6</h1>
+        </div>
+        <img src="your_image_url_here.jpg" alt="Image" />
+        <input
+          type="text"
+          id="user-input-center"
+          placeholder="Type something..."
+        />
+        <button id="next-btn" data-target="task3.html">Next</button>
+      </div>
+    </div>
+
+    <script>
+      // Get elements
+      const userInputCenter = document.getElementById("user-input-center");
+      const nextBtn = document.getElementById("next-btn");
+
+      // Next button click event
+      nextBtn.addEventListener("click", () => {
+        const userMessage = userInputCenter.value.trim();
+        if (userMessage !== "") {
+          // Do something with the user message here
+          console.log("User message:", userMessage);
+          // Redirect to task2.html
+          window.location.href = "task3.html";
+        }
+      });
+    </script>
+  </body>
+</html>
