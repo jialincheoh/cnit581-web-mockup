@@ -1,5 +1,5 @@
 // API Key
-const apiKey = "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";
+const apiKey = "";
 
 // Chat display
 const chatDisplay = document.getElementById("chat-display");
