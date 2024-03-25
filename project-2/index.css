@@ -78,7 +78,7 @@ h1 {
     text-align: center;
     margin-top: 10px;
     & a{
-        color: #2e294e;
+        color: #0000FF;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
