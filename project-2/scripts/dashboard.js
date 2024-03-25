@@ -10,10 +10,8 @@ $dashboard.addEventListener("submit", function (event) {
     }
   });
   if (allChecked) {
-    // Redirect to task1.html
     window.location.href = "task1.html";
   } else {
-    // Notify user to check all checkboxes
     alert("Please check all checkboxes before proceeding.");
   }
 });

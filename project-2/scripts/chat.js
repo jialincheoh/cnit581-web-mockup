@@ -1,16 +1,11 @@
-// API Key
 const apiKey = "";
 
-// Chat display
 const chatDisplay = document.getElementById("chat-display");
 
-// User input
 const userInput = document.getElementById("user-input");
 
-// Send button
 const sendBtn = document.getElementById("send-btn");
 
-// Send message to API
 async function sendMessage(message) {
   try {
     const response = await axios.post(
@@ -38,7 +33,6 @@ async function sendMessage(message) {
   }
 }
 
-// Display message in chat
 function displayMessage(message) {
   const messageElement = document.createElement("div");
   messageElement.classList.add("message");
@@ -46,16 +40,14 @@ function displayMessage(message) {
   chatDisplay.appendChild(messageElement);
 }
 
-// Send button click event
 sendBtn.addEventListener("click", async () => {
   const userMessage = userInput.value.trim();
   if (userMessage !== "") {
     displayMessage(`You: ${userMessage}`);
     const botResponse = await sendMessage(userMessage);
     displayMessage(`ChatGPT: ${botResponse}`);
-    userInput.value = ""; // Clear input field
+    userInput.value = ""; 
   }
 });
 
-// Initial welcome message
-displayMessage("ChatGPT: Hello! How can I assist you today?");
+displayMessage("ChatGPT: Message me to generate a slogan to sell your cocktail.");

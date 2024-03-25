@@ -1,4 +1,4 @@
-/* from login.html page */
+/* apply box-sizing to all pages */
 * {
     box-sizing: border-box;
 }
@@ -41,20 +41,20 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Adjust container width */
+    width: 300px; 
     & h2 {
         text-align: center;
     }
 }
 
-.form-group {
+.info {
     margin-bottom: 15px;
     & label{
         display: block;
         font-weight: bold;
     }
     & input {
-        width: calc(100% - 16px); /* Subtract padding from width */
+        width: calc(100% - 16px); 
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -62,7 +62,7 @@ h1 {
     & button {
         width: 100%;
         padding: 10px;
-        background-color: #007bff;
+        background-color: 	#2e294e;
         color: #fff;
         border: none;
         border-radius: 5px;
@@ -74,11 +74,11 @@ h1 {
     }
 }
 
-.signup-link {
+.signup-url {
     text-align: center;
     margin-top: 10px;
     & a{
-        color: #007bff;
+        color: #2e294e;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
@@ -87,7 +87,7 @@ h1 {
 }
 
 /* dashboard.html page */ 
-.checkbox-group {
+.checkbox {
     margin-bottom: 20px;
     & label {
         display: block;
@@ -100,7 +100,7 @@ button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: 	#2e294e;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -112,7 +112,7 @@ button {
 }
 
 
-/* task1 page */ 
+/* task page */ 
 
 body {
     font-family: Arial, sans-serif;
@@ -133,7 +133,7 @@ body .container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative; /* Make container a positioning context */
+    position: relative;
 }
 .sidebar {
     flex: 1;
@@ -155,7 +155,7 @@ body .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Make center a positioning context */
+    position: relative; 
 }
 .center img {
     width: 200px;
@@ -164,26 +164,26 @@ body .container {
 input[type='text'] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px; /* Decreased margin for space between input and button */
+    margin-bottom: 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 .center button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #2e294e;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px; /* Added margin bottom for space */
+    margin-bottom: 20px; 
 }
 .center button:hover {
-    background-color: #0056b3; /* Apply hover effect */
+    background-color: #0056b3; 
 }
 .slogan-counter {
-    text-align: center; /* Center the text */
+    text-align: center;
     padding: 10px;
     border-radius: 8px;
-    margin-bottom: 20px; /* Add margin to create space between h1 and image/button */
+    margin-bottom: 20px; 
     background-color: rgba(255, 255, 255, 0.8);
 }

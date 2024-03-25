@@ -11,8 +11,7 @@
     <div class="sidebar">
         <h2>ChatGPT App</h2>
         <div class="chat-container">
-            <!-- ChatGPT app content goes here -->
-            <p>This is where ChatGPT app content goes.</p>
+            <p>Hello! I am ChatGPT and you can collaborate with me to generate a slogan to sell your cocktail.</p>
             <div id="chat-display"></div>
             <br />
             <input type="text" id="user-input" placeholder="Type a message...">
@@ -24,24 +23,22 @@
         <div class="slogan-counter">
             <h1>Slogan 5 out of Slogan 6</h1>
         </div>
+        <!--Image source from freepik.com -->
         <img src="images/cocktail5.png" alt="Image">
+        <p>You are free to improve the slogan generated from ChatGPT.</p>
         <input type="text" id="user-input-center" placeholder="Type something...">
         <button id="next-btn">Next</button>
     </div>
 </div>
 
 <script>
-    // Get elements
     const userInputCenter = document.getElementById('user-input-center');
     const nextBtn = document.getElementById('next-btn');
 
-    // Next button click event
     nextBtn.addEventListener('click', () => {
         const userMessage = userInputCenter.value.trim();
         if (userMessage !== '') {
-            // Do something with the user message here
             console.log('User message:', userMessage);
-            // Redirect to task2.html
             window.location.href = 'task6.html';
         }
     });
