@@ -26,16 +26,14 @@
       </form> -->
       <form id="login-form" method="POST">
         {% csrf_token %}
-        <fieldset class="form-group">
-          <legend class="border-bottom mb-4">Join Today</legend>
+
           {{ form }}
-        </fieldset>
         <div class="info">
           <button type="submit">Sign Up</button>
         </div>
       </form>
       <div class="signup-url">
-        <p>Have an account? <a href="login.html">Login here</a>.</p>
+        <p>Have an account? <a href="/login">Login here</a>.</p>
       </div>
     </div>
     <script src="scripts/common.js"></script>

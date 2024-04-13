@@ -1,12 +1,9 @@
-{% extends "users/login.html" %}
-{% load crispy_forms_tags %}
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/static/index.css" />
     <title>Login</title>
   </head>
   <body>
@@ -15,24 +12,17 @@
       <form id="login-form" method = "POST">
         {% csrf_token %}
         <div class="info">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          {{ form|crispy }}
-        </div>
-        <div class="info">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
+
+          {{ form }}
         <div class="info">
           <button type="submit">Login</button>
         </div>
       </form>
       <div class="signup-url">
-        <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+        <p>Don't have an account? <a href="/register">Sign up here</a>.</p>
       </div>
     </div>
     <script src="scripts/common.js"></script>
     <script src="scripts/login.js"></script>
   </body>
 </html>
-{% endblock content %}

@@ -187,3 +187,24 @@ input[type='text'] {
     margin-bottom: 20px; 
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+span.helptext {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type='password'], input[type='text'], input[type='email'] {
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.info {
+    margin-top: 16px;
+}
