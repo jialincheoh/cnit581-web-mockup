@@ -24,6 +24,9 @@ urlpatterns = [
     path('experiment/', include('experiment.urls')),
     path('register/', user_views.signup, name='register'),
     path('login/', user_views.signin, name='signin'),
-    path('/', user_views.signin, name='signin'),
+    path('', user_views.signin, name='signin'),
+    path('task1/', user_views.task1, name='task1'),
     path('dashboard/', user_views.dashboard, name='dashboard'),
+    path('save-user-input/', user_views.save_user_input, name='save_user_input'),
+    path('task2/', user_views.task2, name='task2'),
 ]

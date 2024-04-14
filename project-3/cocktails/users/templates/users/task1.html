@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <title>Task Page</title>
+  </head>
+  <body class="task1">
+    <div class="container">
+      <div class="sidebar">
+        <h2>ChatGPT App</h2>
+        <div class="chat-container">
+          <p>Hello! I am ChatGPT and you can collaborate with me to generate a slogan to sell your cocktail.</p>
+          <div id="chat-display"></div>
+          <br />
+          <input type="text" id="user-input" placeholder="Type a message..." />
+          <input type="number" name="task_number" value="2" style="display: none;"/>
+          <br />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+      <div class="center">
+        <div class="slogan-counter">
+          <h1>Slogan 1 out of Slogan 6</h1>
+        </div>
+        <!--Image source from freepik.com -->
+        <img src="images/cocktail1.png" alt="Image" />
+        <p>You are free to improve the slogan generated from ChatGPT.</p>
+        <form id="user-input-form" method="POST" action="{% url 'save_user_input' %}">
+          {% csrf_token %}
+        <input
+          type="text" name="user_input"
+          id="user-input-center"
+          placeholder="Type something..."
+        />
+        <input type="number" name="task_number" value="1" style="display: none;"/>
+        <button id="next-btn" data-target="task2.html">Next</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/scripts/common.js"></script>
+    <script src="/static/scripts/task.js"></script>
+    <script src="/static/scripts/chat.js"></script>
+  </body>
+</html>

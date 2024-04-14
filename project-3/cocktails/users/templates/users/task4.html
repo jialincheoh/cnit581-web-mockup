@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>Task Page</title>
+</head>
+<body class="task1">
+<div class="container">
+    <div class="sidebar">
+        <h2>ChatGPT App</h2>
+        <div class="chat-container">
+            <p>Hello! I am ChatGPT and you can collaborate with me to generate a slogan to sell your cocktail.</p>
+            <div id="chat-display"></div>
+            <br />
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+        <script src="script.js"></script>
+    </div>
+    <div class="center">
+        <div class="slogan-counter">
+            <h1>Slogan 4 out of Slogan 6</h1>
+        </div>
+        <!--Image source from freepik.com -->
+        <img src="images/cocktail4.png" alt="Image">
+        <p>You are free to improve the slogan generated from ChatGPT.</p>
+        <input type="text" id="user-input-center" placeholder="Type something...">
+        <button id="next-btn">Next</button>
+    </div>
+</div>
+
+<script>
+    const userInputCenter = document.getElementById('user-input-center');
+    const nextBtn = document.getElementById('next-btn');
+
+    nextBtn.addEventListener('click', () => {
+        const userMessage = userInputCenter.value.trim();
+        if (userMessage !== '') {
+            console.log('User message:', userMessage);
+            window.location.href = 'task5.html';
+        }
+    });
+</script>
+
+</body>
+</html>

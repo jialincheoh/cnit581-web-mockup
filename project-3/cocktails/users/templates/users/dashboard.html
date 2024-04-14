@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/static/index.css" />
     <title>Dashboard</title>
   </head>
   <body>
@@ -11,7 +11,8 @@
       <div class="text-center">
         <h1>You are logged in</h1>
         <br />
-        <form id="checkbox-form">
+        <form id="checkbox-form" method="POST">
+          {% csrf_token %}
           <div class="checkbox">
             <label><input type="checkbox" name="checkbox1" /> Your task is to create a slogan for each cocktail that you see.</label>
             <label><input type="checkbox" name="checkbox2" /> There is no length limit for each slogan. </label>
@@ -25,7 +26,7 @@
       </div>
     </div>
 
-    <script src="scripts/common.js"></script>
-    <script src="scripts/dashboard.js"></script>
+    <script src="/static/scripts/common.js"></script>
+    <script src="/static/scripts/dashboard.js"></script>
   </body>
 </html>
