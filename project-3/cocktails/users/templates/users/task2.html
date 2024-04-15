@@ -27,26 +27,17 @@
         <!--Image source from freepik.com -->
         <img src="images/cocktail2.png" alt="Image" />
         <p>You are free to improve the slogan generated from ChatGPT.</p>
+        <form id="user-input-form" method="POST" action="{% url 'save_user_input' %}">
+          {% csrf_token %}
         <input
-          type="text"
+          type="text" name="user_input"
           id="user-input-center"
           placeholder="Type something..."
         />
-        <button id="next-btn" data-target="task3.html">Next</button>
+        <input type="number" name="task_number" value="2" style="display: none;"/>
+        <button id="next-btn">Next</button>
+        </form>
       </div>
     </div>
-
-    <script>
-      const userInputCenter = document.getElementById("user-input-center");
-      const nextBtn = document.getElementById("next-btn");
-
-      nextBtn.addEventListener("click", () => {
-        const userMessage = userInputCenter.value.trim();
-        if (userMessage !== "") {
-          console.log("User message:", userMessage);
-          window.location.href = "task3.html";
-        }
-      });
-    </script>
   </body>
 </html>

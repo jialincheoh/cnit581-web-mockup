@@ -29,4 +29,9 @@ urlpatterns = [
     path('dashboard/', user_views.dashboard, name='dashboard'),
     path('save-user-input/', user_views.save_user_input, name='save_user_input'),
     path('task2/', user_views.task2, name='task2'),
+    path('task3/', user_views.task3, name='task3'),
+    path('task4/', user_views.task4, name='task4'),
+    path('task5/', user_views.task5, name='task5'),
+    path('task6/', user_views.task6, name='task6'),
+    path('final/', user_views.final, name='final'),
 ]

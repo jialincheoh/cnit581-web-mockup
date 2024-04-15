@@ -10,7 +10,7 @@ $dashboard.addEventListener("submit", function (event) {
     }
   });
   if (allChecked) {
-    window.location.href = "task1.html";
+    window.location.href = "/task1/";
   } else {
     alert("Please check all checkboxes before proceeding.");
   }

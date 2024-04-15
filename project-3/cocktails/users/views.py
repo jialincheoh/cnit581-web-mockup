@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from .models import CheckboxData
 from .models import UserInput
-
+from .models import User
 
 def signup(request):
     if request.method == 'POST':
@@ -63,7 +63,7 @@ def dashboard(request):
             checkbox_data_object = CheckboxData.objects.create(**checkbox_data)
             checkbox_data_object.save()
             # Redirect to task1 page
-            return redirect('/task2')
+            return redirect('/task1')
         else:
             # If not all checkboxes are checked, return an error message
             error_message = "Please check all checkboxes."
@@ -76,13 +76,20 @@ def save_user_input(request):
         user_input_text = request.POST.get('user_input', '')
         task_number = request.POST.get('task_number', 1)
         user = request.user
-
+        #user = User.objects.get(username=request.user.username)
+        print(">>>>", user)
         
         # Save user input to the database
-        UserInput.objects.create(text=user_input_text,task_number=task_number, user=user)
+        UserInput.objects.create(
+            text=user_input_text,
+            task_number=task_number,
+            user=user
+        )
 
         # Redirect or render a response as needed
-        return render(request, 'users/task2.html')
+        if int(task_number) == 6:
+            return redirect('/final/')    
+        return redirect('/task' + str(int(task_number) + 1) + '/')
     else:
         return HttpResponse('Invalid request method.')
     
@@ -90,7 +97,26 @@ def task1(request):
     # Your view logic here
     return render(request, 'users/task1.html')
 
-
 def task2(request):
     # Your view logic here
     return render(request, 'users/task2.html')
+
+def task3(request):
+    # Your view logic here
+    return render(request, 'users/task3.html')
+
+def task4(request):
+    # Your view logic here
+    return render(request, 'users/task4.html')
+
+def task5(request):
+    # Your view logic here
+    return render(request, 'users/task5.html')
+
+def task6(request):
+    # Your view logic here
+    return render(request, 'users/task6.html')
+
+def final(request):
+    # Your view logic here
+    return render(request, 'users/final.html')
