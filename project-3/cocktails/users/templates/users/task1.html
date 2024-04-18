@@ -14,10 +14,7 @@
           <p>Hello! I am ChatGPT and you can collaborate with me to generate a slogan to sell your cocktail.</p>
           <div id="chat-display"></div>
           <br />
-          <input type="text" id="user-input" placeholder="Type a message..." />
-          <input type="number" name="task_number" value="2" style="display: none;"/>
-          <br />
-          <button id="send-btn">Send</button>
+          <button id="generate-btn">Generate Slogan</button>
         </div>
       </div>
       <div class="center">
@@ -29,13 +26,9 @@
         <p>You are free to improve the slogan generated from ChatGPT.</p>
         <form id="user-input-form" method="POST" action="{% url 'save_user_input' %}">
           {% csrf_token %}
-        <input
-          type="text" name="user_input"
-          id="user-input-center"
-          placeholder="Type something..."
-        />
-        <input type="number" name="task_number" value="1" style="display: none;"/>
-        <button id="next-btn">Next</button>
+          <input type="text" name="user_input" id="user-input-center" placeholder="Type something..." />
+          <input type="number" name="task_number" value="1" style="display: none;" />
+          <button id="next-btn">Next</button>
         </form>
       </div>
     </div>

@@ -1,10 +1,23 @@
-const apiKey = "";
-
+const apiKey = "sk-proj-4bcAtROw9mwf43Z7tGVUT3BlbkFJyh34j5IVUvam3wIrMvUv";
 const chatDisplay = document.getElementById("chat-display");
+const generateBtn = document.getElementById("generate-btn");
 
-const userInput = document.getElementById("user-input");
+let sloganIndex = 0;
+const slogans = [
+  "Slogan 1: Your Cocktail, Our Passion!",
+  "Slogan 2: Shake It Up with Our Signature Cocktail!",
+  "Slogan 3: Taste the Difference with Our Crafted Cocktails!",
+  "Slogan 4: Unwind with Our Exquisite Cocktails!",
+  "Slogan 5: Elevate Your Spirits with Our Premium Cocktails!",
+  "Slogan 6: Cheers to Great Times with Our Cocktails!"
+];
 
-const sendBtn = document.getElementById("send-btn");
+generateBtn.addEventListener("click", () => {
+  if (sloganIndex < slogans.length) {
+    displayMessage(`ChatGPT: ${slogans[sloganIndex]}`);
+    sloganIndex++;
+  }
+});
 
 async function sendMessage(message) {
   try {
@@ -39,15 +52,5 @@ function displayMessage(message) {
   messageElement.textContent = message;
   chatDisplay.appendChild(messageElement);
 }
-
-sendBtn.addEventListener("click", async () => {
-  const userMessage = userInput.value.trim();
-  if (userMessage !== "") {
-    displayMessage(`You: ${userMessage}`);
-    const botResponse = await sendMessage(userMessage);
-    displayMessage(`ChatGPT: ${botResponse}`);
-    userInput.value = ""; 
-  }
-});
 
 displayMessage("ChatGPT: Message me to generate a slogan to sell your cocktail.");
