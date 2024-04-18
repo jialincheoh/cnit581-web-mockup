@@ -1,4 +1,4 @@
-const apiKey = "sk-proj-4bcAtROw9mwf43Z7tGVUT3BlbkFJyh34j5IVUvam3wIrMvUv";
+const apiKey = "";
 const chatDisplay = document.getElementById("chat-display");
 const generateBtn = document.getElementById("generate-btn");
 
