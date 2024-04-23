@@ -123,6 +123,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 IGNORABLE_404_URLS = [
     r'^/favicon\.ico$',
 ]
