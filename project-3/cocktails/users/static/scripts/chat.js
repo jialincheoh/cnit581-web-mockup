@@ -4,12 +4,16 @@ const generateBtn = document.getElementById("generate-btn");
 
 let sloganIndex = 0;
 const slogans = [
-  "Slogan 1: Your Cocktail, Our Passion!",
-  "Slogan 2: Shake It Up with Our Signature Cocktail!",
-  "Slogan 3: Taste the Difference with Our Crafted Cocktails!",
-  "Slogan 4: Unwind with Our Exquisite Cocktails!",
-  "Slogan 5: Elevate Your Spirits with Our Premium Cocktails!",
-  "Slogan 6: Cheers to Great Times with Our Cocktails!"
+  "Slogan 1: Sip, Savor, and Celebrate!",
+  "Slogan 2: Mixing Memories, One Cocktail at a Time.",
+  "Slogan 3: Crafting Cheers, Stirring Stories.",
+  "Slogan 4: Indulge in Liquid Luxury.",
+  "Slogan 5: Taste the Spirit of Adventure.",
+  "Slogan 6: Raise Your Glass to Unforgettable Moments.", 
+  "Slogan 7: Shake, Stir, Sip, Repeat.",
+  "Slogan 8: From Shaker to Sip, Pure Bliss.", 
+  "Slogan 9: Where Every Sip Tells a Tale.", 
+  "Slogan 10: Cocktails: Turning Ordinary Moments into Extraordinary Memories."
 ];
 
 generateBtn.addEventListener("click", () => {
