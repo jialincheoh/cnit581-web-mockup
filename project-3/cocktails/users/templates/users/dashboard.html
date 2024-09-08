@@ -10,16 +10,29 @@
     <div class="container">
       <div class="text-center">
         <h1>You are logged in</h1>
+        <h3>Task Description</h3>
+        <p>You are a creative entrepreneur looking to generate new product ideas to combat issues of excessive screen time among Amazon Mechanical Turk workers. The product could be a physical product, software or service. The ideas are just ideas. The product need not yet exist, nor may it necessarily be clearly feasible. Give your product a name. You will generate 5 creative ideas iteratively. The product description after the product name should be expressed as a paragraph of 50 - 200 words.</p>
         <br />
+        <h3>Sample Ideas</h3>
+        These are 5 samples ideas from artificial intelligence (AI) on this task. Check the boxes to confirm you read these ideas and click next to continue. 
         <form id="checkbox-form" method="POST">
           {% csrf_token %}
           <div class="checkbox">
-            <label><input type="checkbox" name="checkbox1" /> Your task is to create a slogan for each cocktail that you see.</label>
-            <label><input type="checkbox" name="checkbox2" /> There is no length limit for each slogan. </label>
-            <label><input type="checkbox" name="checkbox3" /> There is no time limit to create each slogan.</label>
-            <label><input type="checkbox" name="checkbox4" /> You can consult ChatGPT to create the slogans. </label>
-            <label><input type="checkbox" name="checkbox5" /> Imagine yourself as a restaurant owner who wants to sell cocktails. </label>
-            <label><input type="checkbox" name="checkbox6" /> Your goal is to maximize the chances of selling each cocktail with your slogans. </label>
+            <h4>Product Idea 1</h4>
+            <label><input type="checkbox" name="checkbox2" /> VisionRest: Wearable Eye & Stress Relief Device
+              VisionRest is a smart wearable designed to combat screen fatigue and overall work stress. It combines blue light-blocking technology with built-in light therapy and soothing aroma dispensers. Worn like a pair of comfortable glasses, VisionRest tracks your screen exposure and notifies you when it's time for a break, automatically adjusting light and scent intensity to help your eyes and mind recover. With real-time stress level monitoring, this device offers a holistic approach to reducing strain from excessive digital engagement, making it a powerful tool for Amazon Mechanical Turk workers looking for quick relief during their workday. </label>
+            <h4>Product Idea 2</h4>
+            <label><input type="checkbox" name="checkbox3" /> MindSync: AI-Driven Personal Wellness Assistant
+              MindSync is an AI-driven wellness assistant that optimizes your work-break balance, using data on your productivity, performance, and well-being. It intelligently schedules mindfulness breaks and suggests relaxation activities based on your work patterns. MindSync learns over time, adapting its suggestions to help you stay energized and focused without overloading on screen time. The app integrates seamlessly with work platforms like Amazon Mechanical Turk, sending gentle reminders and even pausing work for a mindfulness moment if needed. This AI goes beyond just scheduling—it's your personalized guide to maintaining mental clarity and focus.</label>
+            <h4>Product Idea 3</h4>
+            <label><input type="checkbox" name="checkbox4" /> PetMind: Virtual Companion for Digital Detox
+              PetMind is an AI-powered virtual pet that "grows" healthier and happier the more you reduce your screen time. By gamifying the digital detox experience, this companion offers immediate, tangible rewards as you take breaks from your devices. PetMind engages you with fun, interactive activities that encourage movement, rest, and mindfulness, rewarding positive behavior with new features and levels for your virtual pet. Ideal for those who work long hours on Amazon Mechanical Turk, PetMind gives you motivation to step away from the screen and focus on your well-being while nurturing a playful and rewarding digital companion. </label>
+            <h4>Product Idea 4</h4>
+            <label><input type="checkbox" name="checkbox5" /> WorkPod: Modular Workspace Customization Kit
+              WorkPod is a modular kit designed to enhance productivity and comfort for people working in small or shared spaces. Each kit includes customizable ergonomic components like desk risers, posture-correcting cushions, and attachable screen shields that reduce glare and blue light. It also features sensory accessories, such as calming desk lights and scent diffusers, specifically curated to create a more balanced, healthy work environment. WorkPod empowers Amazon Mechanical Turk workers to take control of their workspace no matter how limited or transient it may be, making it easy to reduce distractions and stay focused. </label>
+              <h4>Product Idea 5</h4>
+              <label><input type="checkbox" name="checkbox6" /> SensoryReset: Personalized Break Box Subscription
+              SensoryReset is a monthly subscription box that delivers customized sensory tools to help workers take immersive, rejuvenating breaks. Each box is tailored to the user’s preferences and might include items like noise-canceling earplugs, soothing herbal teas, or ambient light filters designed to create a calming environment for digital workers. The products are chosen to help Amazon Mechanical Turk workers break free from the stresses of excessive screen time, offering everything needed to transform short breaks into moments of deep relaxation. Every month, new sensory items arrive, helping you build a personalized rest zone wherever you work. </label>
           </div>
           <button type="submit">Start the task</button>
         </form>

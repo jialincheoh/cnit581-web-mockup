@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/static/index.css">
-<title>Task Page</title>
-</head>
-<body class="task1">
-<div class="container">
-    <div class="sidebar">
-        <h2>ChatGPT App</h2>
-        <div class="chat-container">
-            <p>Hello! I am ChatGPT and you can collaborate with me to generate a slogan to sell your cocktail.</p>
-            <div id="chat-display"></div>
-            <br />
-            <button id="generate-btn">Generate Slogan</button>
-        </div>
-    </div>
-    <div class="center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <title>Task Page</title>
+  </head>
+  <body class="task6">
+    <div class="container">
+      <div class="center">
         <div class="slogan-counter">
-            <h1>Slogan 6 out of Slogan 6</h1>
+          <h1>Product Idea 6</h1>
         </div>
-        <!--Image source from freepik.com -->
-        <img src="/static/images/cocktail6.png" alt="Image">
-        <p>You are free to improve the slogan generated from ChatGPT.</p>
+        <p>You are a creative entrepreneur looking to generate new product ideas to combat issues of excessive screen time among Amazon Mechanical Turk workers. The product could be a physical product, software or service. The ideas are just ideas. The product need not yet exist, nor may it necessarily be clearly feasible. Give your product a name. You will generate 5 creative ideas iteratively. The product description after the product name should be expressed as a paragraph of 50 - 200 words.</p>
         <form id="user-input-form" method="POST" action="{% url 'save_user_input' %}">
-            {% csrf_token %}
-          <input
-            type="text" name="user_input"
-            id="user-input-center"
-            placeholder="Type something..."
-          />
-          <input type="number" name="task_number" value="6" style="display: none;"/>
+          {% csrf_token %}
+          <textarea name="user_input" id="user-input-center" placeholder="Type something..." style="width: 400px; height: 400px; padding: 0; text-align: left; word-wrap: break-word; overflow-wrap: break-word;"></textarea>
+          <input type="number" name="task_number" value="6" style="display: none;" />
           <button id="next-btn">Next</button>
-          </form>
+        </form>
+      </div>
     </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/static/scripts/common.js"></script>
-<script src="/static/scripts/chat.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/scripts/common.js"></script>
+    <script src="/static/scripts/chat.js"></script>
+  </body>
 </html>
